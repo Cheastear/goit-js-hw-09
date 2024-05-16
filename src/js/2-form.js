@@ -8,12 +8,8 @@ const email = document.querySelector('.feedback-form [name="email"]');
 const message = document.querySelector('.feedback-form [name="message"]');
 
 document.querySelector('.feedback-form').addEventListener('input', e => {
-  if (e.target.name == "email") {
-    formData.email = email.value;
-  }
-  else if (e.target.name == "message"){
-    formData.message = message.value;
-  }
+  formData.email = email.value;
+  formData.message = message.value;
   
   localStorage.setItem(keyData, JSON.stringify(formData));
 })
